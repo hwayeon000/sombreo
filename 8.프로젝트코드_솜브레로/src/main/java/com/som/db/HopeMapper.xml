@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.som.db.HopeMapper">
+	
+
+	<insert id="uploadHope" parameterType="HopeVO">
+		insert into t_hope values(hope_seq.nextval,#{hope_name},#{hope_price},#{hope_content},#{hope_photo},sysdate) 
+	</insert>
+  
+  	<select id="showHope" parameterType="HopeVO" resultType="HopeVO">
+  		select * from t_Hope order by hope_date desc
+  	</select>
+
+	<select id="detailHope" resultType="HopeVO"> 
+		select * from t_Hope where num=#{num}
+	</select>
+ 
+  </mapper>
+	
+	 
+	 

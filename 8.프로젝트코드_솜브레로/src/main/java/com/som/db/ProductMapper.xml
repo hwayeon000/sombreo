@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.som.db.ProductMapper">
+	<select id="showProducts" resultType="ProductVO"> select * from t_products pro, t_photos ph where pro.photo_seq = ph.photo_seq order by pro.cate_seq desc</select>
+	<select id="adminShowProduct" resultType="ProductVO"> select * from t_products, t_category where t_products.cate_seq = t_category.cate_seq </select>
+	<select id="getCateDepth1" resultType="ProductVO"> SELECT cate_depth1 FROM t_category c, t_products p WHERE c.cate_seq = p.cate_seq and p.cate_seq = #{cate_seq}</select>
+	<select id="getPhotoPath" resultType="ProductVO"> select photo_path from t_products pr, t_photos ph where pr.photo_seq = ph.photo_seq and pr.photo_seq = #{photo_seq}</select>
+	<select id="getProductDetail" parameterType="int" resultType="ProductVO">  
+		SELECT *  FROM t_products d, t_photos p WHERE d.product_seq=p.product_seq and d.product_seq=#{product_seq}
+	</select> 
+</mapper>

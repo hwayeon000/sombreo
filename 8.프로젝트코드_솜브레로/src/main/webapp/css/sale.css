@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: TheJamsil5Bold;
+    src: url('../fonts/The_Jamsil_OTF/The_Jamsil-3-Regular.ttf');
+}
+
+body{
+	font-family: TheJamsil5Bold;
+	font-size: 15px;
+}
+
+#saleDiv {
+	display: flex;
+  	justify-content: center;
+}
+
+#saleTable{
+	width: 800px;
+}
+
+.cateTr{
+	height: 40px;
+}
+
+.nameTr{
+	height: 40px;
+}
+
+.priceTr{
+	height: 40px;
+}
+
+.contentTr{
+	height: 120px;
+}
+
+.photoTr{
+	height: 350px;
+}
+
+.accountTr{
+	height:120px;
+}
+
+.returnTr{
+	height:40px;
+}
+
+.submitTr{
+	height:40px;
+}
+
+.acceptTr{
+	height:120px;
+}
+
+#preview{
+	width:300px;
+	height:300px;
+}
+
+#preview>img{
+	width:300px;
+	height:300px;
+}
+
+  th, td {
+    border: 1px solid #e6e6e6;
+    border-radius: 2px;
+    padding: 15px;
+  }
+  
+  .ulClass{
+  	 list-style-type: "▪"  }
+  	 
+  li{
+  	padding: 3px;
+  }
+
+  #ckDiv{
+  	margin: 5px;
+  }
+  
+ #saleForm> input, textarea, label {
+    outline: none;
+    border: none;
+    display: inline;
+}
+
+#account>td,tr {
+    border-bottom: 1px solid #444444;
+}
+
+#saleDiv{
+	margin-top: 100px;
+	margin-bottom: 100px;
+}

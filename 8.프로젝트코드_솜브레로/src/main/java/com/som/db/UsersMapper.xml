@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.som.db.UsersMapper">
+
+	 <select id="selectAll" resultType="UsersVO">
+  		select * from t_users where not(user_id='admin')
+  	</select>
+  
+  	<delete id="delete" parameterType="UsersVO">
+  		delete from t_users where user_id=#{user_id}
+  	</delete>
+  	
+  	<update id="updateStatus" parameterType="UsersVO">
+  		update t_users set user_status=#{user_status} where user_seq=#{user_seq}
+  	</update>
+  	
+  <insert id="insertUser" parameterType="UsersVO" >
+  	insert into t_users values(user_seq.nextval,#{user_id},#{user_pw},#{user_name},#{user_nick},#{user_address},#{user_phone},sysdate,null)
+  </insert>
+  
+  	<select id="login" parameterType="UsersVO" resultType="UsersVO">
+  		select * from t_users where user_id=#{user_id} and user_pw=#{user_pw}
+  	</select>
+  	<select id="getReviewUser" parameterType="int" resultType="UsersVO"> SELECT user_seq FROM t_rentals r, t_orders o where o.order_seq=r.order_seq and product_seq=#{product_seq} </select>
+  	
+</mapper>

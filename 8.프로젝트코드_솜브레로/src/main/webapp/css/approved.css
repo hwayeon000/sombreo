@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.frame {
+  margin: auto;
+  text-align: center;
+}
+
+/* 적용 안됨...체크해보기........... */
+#agreeCheckArea {
+  display: flex;
+}

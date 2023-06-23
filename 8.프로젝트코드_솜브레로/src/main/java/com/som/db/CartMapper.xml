@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.som.db.CartMapper">
+	<insert id="insertCart" parameterType="CartVO"> INSERT INTO t_cart VALUES ( cart_seq.nextval, #{user_seq}, #{product_seq}, #{cart_quantity}, #{cart_period}, sysdate ) </insert>
+	<select id="printCart" parameterType="int" resultType="CartVO">
+	SELECT c.cart_seq, c.cart_quantity, c.cart_period, a.product_seq, a.product_name, a.product_price, b.photo_path
+	FROM t_cart c, t_products a, t_photos b 
+	WHERE c.product_seq=a.product_seq(+) and a.photo_seq=b.photo_seq(+) and c.user_seq=#{user_seq}
+	</select>
+	<delete id="deleteCart" parameterType="int"> DELETE FROM t_cart WHERE cart_seq=#{cart_seq} </delete>
+	<delete id="ClearCart" parameterType="int"> DELETE FROM t_cart WHERE user_seq=#{user_seq} </delete>
+</mapper>

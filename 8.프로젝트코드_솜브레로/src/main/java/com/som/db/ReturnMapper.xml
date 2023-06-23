@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.som.db.ReturnMapper">
+	<select id="showAllReturn" resultType="returnVO">
+select
+	o.user_seq
+	, rt.rental_seq
+,(select user_name from t_users where user_seq = o.user_seq) as user_name 
+,o.order_quantity
+, (select product_name from t_products where product_seq = rt.product_seq) as product_name
+, rt.rental_date
+, rt.rental_period
+, (o.order_date + rt.rental_period + 6) as return_ex_date
+, (o.order_date + rt.rental_period + 6 - sysdate) as return_num
+from t_orders o, t_rentals rt
+where o.order_seq = rt.order_seq
+and rt.rental_seq not IN (SELECT rental_seq FROM t_return)
+order by return_ex_date
+	</select>
+	
+	<insert id="insertReturn" parameterType="returnVO">
+		insert into t_return values(return_seq.nextval,#{user_seq},#{rental_seq},#{return_quantity},
+		#{return_date}, #{return_others}, sysdate
+		)
+	</insert>
+</mapper>

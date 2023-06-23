@@ -1,0 +1,315 @@
+@charset "UTF-8";
+
+#mypageDiv{
+	display: flex;
+
+  position: relative;
+  left: 100px;
+}
+
+#menuDiv{
+	position: relative;
+	float: left;
+	width: 200px;
+	margin-left: 10px;
+	top: 100px;
+	height: 1500px;
+}
+
+#statusDiv{
+	position: relative;
+	top: 50px;
+	display: flex;
+	margin: 0 auto;
+	left: 140px;
+}
+
+
+#orderDiv{
+	position: relative;
+	top: 100px;
+	margin: 0 auto;
+}
+
+#userDiv{
+	position: relative;
+	margin: 10px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	height: 200px;
+	width: 1150px;
+}
+
+#rightDiv{
+	position:relative;
+	left: 100px;
+}
+
+#recommendDiv{
+	margin-top:50px;
+}
+
+#recommendItem{
+	margin-top: 50px;
+	background-color: rgb(61, 60, 60);
+	
+}
+
+#myInquiry{
+	position:relative;
+	margin-top: 150px;
+}
+
+#userDiv> div{
+	
+	margin:10px;
+}
+
+#hiUser{
+	float: left;
+	width: 400px;
+	height: 180px;
+	margin:10px;
+	margin-right: 0px;
+	padding: 34px;
+	background-color: rgb(61, 60, 60);
+}
+
+#coin_coupon{
+	float: right;
+	width: 700px;
+	margin:10px;
+	position:relative;
+	right: 20px;
+}
+
+#coin{
+	float: left;
+	width: 330px;
+	height: 180px;
+	margin:10px;
+	padding: 34px;
+	background-color: rgb(61, 60, 60);
+	position:relative;
+	right: 10px;
+	bottom: 10px;
+}
+
+#coupon{
+	float: right;
+	width: 330px;
+	height: 180px;
+	margin:10px;
+	padding: 34px;
+	background-color: rgb(61, 60, 60);
+	position:relative;
+	bottom: 10px;
+	right: 20px;
+	
+}
+menuDiv2{
+	top: 0;
+}
+
+.my_tit{
+    -webkit-text-size-adjust: none;
+    font-family: 'campton', 'Apple SD Gothic Neo', NanumBarunGothic,
+          '나눔바른고딕', Malgun Gothic, '맑은 고딕', dotum, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    border-bottom: 4px solid #000;
+    color: #000;
+    padding-bottom: 10px;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 30px;	
+}
+
+.orderProduct>img{
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+}
+
+.date{
+	width: 200px;
+	text-align: center;
+}
+
+.orderProduct{
+	width: 500px;
+}
+
+.orderP{
+	width: 200px;
+	text-align: center;
+}
+
+.orderPrice{
+	width: 150px;
+	text-align: center;
+}
+
+.returnDate{
+	width: 200px;
+	text-align: center;
+}
+
+#orderTh>th{
+	padding: 20px;
+	border-bottom: 1px;
+	font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 1px solid #444444;
+}
+
+.orderTr>td{
+	padding: 10px;
+	border-bottom: 1px solid rgb(194, 194, 194);
+}
+
+#hidden{
+	display: none;
+}
+
+
+.circle {
+	width: 150px;
+    height: 150px;
+    background-color: rgb(244, 242, 245);
+    border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px
+}
+
+.circle>span{
+	font-size: 20;
+}
+
+.circle>p{
+	color: rgb(244, 242, 245);
+}
+
+#hiSpan{
+	font-size: 20px;
+	color: white;
+	font-family: 'campton', 'Apple SD Gothic Neo', NanumBarunGothic,
+          '나눔바른고딕', Malgun Gothic, '맑은 고딕', dotum, sans-serif;
+}
+
+.title{
+	font-size: 15px;
+
+	color: white;
+	font-family: 'campton', 'Apple SD Gothic Neo', NanumBarunGothic,
+          '나눔바른고딕', Malgun Gothic, '맑은 고딕', dotum, sans-serif;
+}
+
+.data{
+	font-size: 25px;
+	font-weight: bold;
+	color: white;
+	font-family: 'campton', 'Apple SD Gothic Neo', NanumBarunGothic,
+          '나눔바른고딕', Malgun Gothic, '맑은 고딕', dotum, sans-serif;
+}
+
+.mypage_menu{
+	padding: 10px;
+}
+
+.mypage_menu>a{
+	color: #999999;
+}
+
+.returnDate{
+	font-weight: bold;
+}
+
+.em_status{
+	font-size: 30px;
+	font-style: normal;
+	font-weight: bold;
+	position: relative;
+	left: 19.5px;
+}
+
+.recommendItems{
+	width: 280px;
+	height: 280px;
+	background-color: rgb(244, 242, 245);
+	float:left;
+	margin: 0 10px;
+}
+
+.recommendItems>img{
+	width: 280px;
+	height: 280px;
+	position: relative;
+	padding: 40px;
+}
+
+.r_textC{
+	width: 280px;
+	height: 140px;
+	float:left;
+	margin: 0 10px;
+}
+
+.r_title{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.r_price{
+	font-size: 17px;
+}
+
+.inquiry_seq{
+	width: 200px;
+	padding: 10px;
+}
+
+.inquiryContent{
+	width: 700px;
+	padding: 10px;
+}
+
+.inquiryWriteDate{
+	width: 200px;
+	padding: 10px;
+}
+
+.answerState{
+	width: 200px;
+	padding: 20px;
+}
+
+#inquiryTh{	
+border-bottom: 1px solid #444444;
+}
+
+.answerTd{
+	border-top: #f5f5f5;
+}
+
+.myInquiryTd{
+	border-top: #f5f5f5;
+}
+
+.myInquiryContentTd>td{
+	background-color: rgb(244, 242, 245);
+}
+
+.answerTd>td{
+	background-color: rgb(244, 242, 245);
+	border-bottom: 1px solid rgb(194, 194, 194);
+	
+}
+
+.myInquiryTd:hover{
+	background-color: rgb(244, 242, 245);
+}

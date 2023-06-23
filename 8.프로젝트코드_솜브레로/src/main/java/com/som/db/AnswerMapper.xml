@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.som.db.AnswerMapper">
+  	<insert id="uploadAnswer" parameterType="AnswerVO">
+		insert into t_answer values(t_answer_seq.nextval,#{inquiry_seq},#{answer_title},#{answer_content},sysdate)
+  		  	</insert>
+  	
+</mapper>

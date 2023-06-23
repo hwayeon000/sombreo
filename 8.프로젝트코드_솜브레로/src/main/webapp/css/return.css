@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+ #returnPage{
+	height: 1000px;
+} 
+#returnTableDiv{
+	position:relative;
+	top: 100px;
+}
+
+#returnPeople{
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#titleTr>th{
+	padding: 20px;
+	font-size: 14px;
+    text-align: center;
+    border-bottom: 5px solid rgb(255, 255, 255);
+    background-color: rgb(82, 77, 77);
+    color: white;
+}
+
+.dataTr>td{
+	padding: 10px;
+	text-align: center;
+	border-bottom: 5px solid rgb(255, 255, 255);
+	background-color: rgb(247, 242, 242);
+	height: 20px;
+}
+
+.r_num{
+	width:100px;
+}
+
+.r_button{
+  margin: 5px;
+  outline: none;
+   width: 130px;
+  height: 30px;
+  border: 1px solid #000;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: rgb(247, 242, 242);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.r_button:hover{
+	box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+}
+
+#r_head{
+	position:relative;
+	top:50px;
+}
+
+.r_product{
+	width: 300px;
+}
+
+.r_start, .r_ex_date{
+	width: 150px;
+}
+
+.r_h_userseq, .r_h_rentalseq{
+	display:none;
+}
+
+#returnPage{
+	height: 2000px;
+}
+
+#returnTableDiv{
+	position:relative;
+	top: 100px;
+}
+
+#returnPeople{
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#titleTr>th{
+	padding: 20px;
+	font-size: 14px;
+    text-align: center;
+    border-bottom: 5px solid rgb(255, 255, 255);
+    background-color: rgb(82, 77, 77);
+    color: white;
+}
+
+.dataTr>td{
+	padding: 10px;
+	text-align: center;
+	border-bottom: 5px solid rgb(255, 255, 255);
+	background-color: rgb(247, 242, 242);
+	height: 20px;
+}
+
+.r_num{
+	width:100px;
+}
+
+.r_button{
+  margin: 5px;
+  outline: none;
+   width: 130px;
+  height: 30px;
+  border: 1px solid #000;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: rgb(247, 242, 242);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.r_button:hover{
+	box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+}
+
+#r_head{
+	position:relative;
+	top:50px;
+}
+
+.r_product{
+	width: 300px;
+}
+
+.r_start, .r_ex_date{
+	width: 150px;
+}
+
+.r_h_userseq, .r_h_rentalseq{
+	display:none;
+}

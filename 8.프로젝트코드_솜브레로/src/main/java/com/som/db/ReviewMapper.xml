@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.som.db.ReviewMapper">
+	<select id="getReviews" resultType="ReviewVO">
+	SELECT t.review_seq, t.user_seq, t.product_seq, t.review_photo, t.review_content, t.review_date, t.review_check, c.user_nick   
+	FROM t_reviews_product t , t_users c
+	WHERE product_seq=#{product_seq} and t.user_seq = c.user_seq
+	</select>
+	<insert id="insertReview" parameterType="ReviewVO"> INSERT INTO t_reviews_product VALUES (
+    review_seq.nextval, #{user_seq}, #{product_seq}, #{review_content}, #{review_photo}, SYSDATE, #{review_check} ) </insert>
+</mapper>

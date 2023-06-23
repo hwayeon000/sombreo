@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<configuration>
+	<properties resource="com/som/db/db.properties" />
+
+	<!-- 타입 Alias 설정해주기 -->
+	<typeAliases>
+		<typeAlias type="com.som.model.MessageVO" alias="MessageVO"/>
+		<typeAlias type="com.som.model.ProductVO" alias="ProductVO"/>
+		<typeAlias type="com.som.model.SaleVO" alias="SaleVO"/>
+		<typeAlias type="com.som.model.UsersVO" alias="UsersVO"/>
+		<typeAlias type="com.som.model.CartVO" alias="CartVO"/>
+		<typeAlias type="com.som.model.OrderVO" alias="OrderVO"/>
+		<typeAlias type="com.som.model.mypageVO" alias="mypageVO"/>
+		<typeAlias type="com.som.model.InquiryVO" alias="InquiryVO"/>
+		<typeAlias type="com.som.model.returnVO" alias="returnVO"/>
+		<typeAlias type="com.som.model.RentalVO" alias="RentalVO"/>
+		<typeAlias type="com.som.model.ApproveVO" alias="ApproveVO"/>
+		<typeAlias type="com.som.model.ReviewVO" alias="ReviewVO"/>
+		<typeAlias type="com.som.model.returnVO" alias="returnVO"/>
+		<typeAlias type="com.som.model.AnswerVO" alias="AnswerVO"/>
+		<typeAlias type="com.som.model.HopeVO" alias="HopeVO"/>
+	</typeAliases>
+
+	<!-- 환경설정 ( 계정, url, driver ) -->
+  <environments default="development">
+  	<!-- 여러개의 환경설정 가능 -->
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <!-- sql문들을 정의 해주는 mapper.xml 생성 후 경로 지정해주는 태그 -->
+  <mappers>
+    <mapper resource="com/som/db/MessageMapper.xml"/>    
+    <mapper resource="com/som/db/ProductMapper.xml"/>    
+    <mapper resource="com/som/db/SaleMapper.xml"/>   
+    <mapper resource="com/som/db/UsersMapper.xml"/>  
+    <mapper resource="com/som/db/CartMapper.xml"/>    
+    <mapper resource="com/som/db/OrderMapper.xml"/>
+    <mapper resource="com/som/db/MypageMapper.xml"/>    
+    <mapper resource="com/som/db/InquiryMapper.xml"/>
+    <mapper resource="com/som/db/ReturnMapper.xml"/> 
+    <mapper resource="com/som/db/RentalMapper.xml"/>    
+    <mapper resource="com/som/db/ApproveMapper.xml"/>    
+    <mapper resource="com/som/db/ReviewMapper.xml"/>
+    <mapper resource="com/som/db/ReturnMapper.xml"/>
+    <mapper resource="com/som/db/AnswerMapper.xml"/>  
+    <mapper resource="com/som/db/HopeMapper.xml"/>  
+  </mappers>
+</configuration>
+

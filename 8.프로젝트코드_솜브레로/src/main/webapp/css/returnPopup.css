@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+#returnPopup{
+display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.r_content{
+	padding:10px;
+}
+
+.r_submit{
+	padding:10px;
+}
+
+.r_submit>input, button{
+	margin: 10px;
+}
+
+.r_content_input{
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	border-bottom: 2px solid black;
+	outline:none;
+}
+
+th{
+	color: black;
+}
